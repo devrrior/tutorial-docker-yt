@@ -5,7 +5,7 @@ services:
   django:
     build: .
     ports:
-      - 8000:8000
+      - "8000:8000"
     volumes:
       - .:/app
     depends_on:
@@ -14,7 +14,7 @@ services:
   postgres:
     image: postgres:14.3-alpine3.16
     ports:
-      - 5431:5432
+      - "5431:5432"
     volumes:
       - ./database:/var/lib/postgresql/data
     environment:
